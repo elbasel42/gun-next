@@ -1,11 +1,10 @@
-"use server";
-
 import GUN from 'gun';
 import { listenerHandler } from './listener';
 
 const gunSingleton = () => {
   return GUN({
-    file: './db.json',
+    // file: './db.json',
+    radisk: false
   });
 };
 
