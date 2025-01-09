@@ -1,4 +1,5 @@
 import GUN from 'gun';
+import { listenerHandler } from './listener';
 
 const gunSingleton = () => {
   return GUN({});
@@ -9,6 +10,12 @@ declare const globalThis: {
 } & typeof global;
 
 const gun = globalThis.gunGlobal ?? gunSingleton();
+gun
+  .get('data')
+  .get('userId')
+  .on((value, key, _msg, _ev) => {
+    listenerHandler(value, key, _msg, _ev);
+  });
 
 export { gun };
 
