@@ -1,8 +1,12 @@
+"use server";
+
 import GUN from 'gun';
 import { listenerHandler } from './listener';
 
 const gunSingleton = () => {
-  return GUN({});
+  return GUN({
+    file: './db.json',
+  });
 };
 
 declare const globalThis: {

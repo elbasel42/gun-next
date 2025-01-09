@@ -2,7 +2,7 @@
 // import { gun } from './db';
 'use server';
 
-import { revalidatePath } from 'next/cache';
+// import { revalidatePath } from 'next/cache';
 
 // let ev = null;
 export const listenerHandler = async (
@@ -12,7 +12,7 @@ export const listenerHandler = async (
   _ev: any
 ) => {
   console.log('listenerHandler:', { value, key, _msg, _ev });
-  revalidatePath('/');
+  // revalidatePath('/');
   //   ev = _ev;
   //...
 };
