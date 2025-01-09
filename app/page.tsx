@@ -1,5 +1,7 @@
 import { getUserId, setUserId } from './actions/userId';
 
+export const dynamic = 'force-dynamic';
+
 const HomePage = async () => {
   const userId = await getUserId();
 
