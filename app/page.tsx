@@ -1,9 +1,16 @@
 import { getUserId, setUserId } from './actions/userId';
 
+// import { gun } from './db/db';
+
 export const dynamic = 'force-dynamic';
 
 const HomePage = async () => {
   const userId = await getUserId();
+  // const userId = gun
+  // .get('data')
+  // .get('userId')
+  // .once((data) => console.log({ data }));
+  console.log({ userId });
 
   return (
     <main className='min-h-screen flex flex-col items-center justify-center bg-black'>
