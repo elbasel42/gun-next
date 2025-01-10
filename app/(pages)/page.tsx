@@ -3,7 +3,7 @@
 // import { revalidatePath } from 'next/cache';
 import { setUserId } from '../actions/userId';
 import { RealtimeValue } from '../components/RealtimeValue';
-import { gun } from '../db/db';
+// import { gun } from '../db/db';
 
 // import { useEffect, useState } from 'react';
 // import GUN from 'gun';
