@@ -3,7 +3,7 @@ import GUN from 'gun';
 
 const gunSingleton = () => {
   return GUN();
-};
+}
 
 declare const globalThis: {
   gunGlobal: ReturnType<typeof gunSingleton>;
