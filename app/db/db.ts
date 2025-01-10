@@ -2,7 +2,7 @@ import GUN from 'gun';
 // import { listenerHandler } from './listener';
 
 const gunSingleton = () => {
-  return GUN(['http://localhost:3001/gun']);
+  return GUN(['https://gun-server-zeta.vercel.app/gun']);
 };
 
 declare const globalThis: {
