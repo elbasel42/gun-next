@@ -1,6 +1,6 @@
 'use server';
 
-import { revalidatePath } from 'next/cache';
+// import { revalidatePath } from 'next/cache';
 import { getValue, setValue } from '../util/db';
 // import { validateNumber } from '../validation/validateNubmer';
 
@@ -11,7 +11,7 @@ export const setUserId = async (formData: FormData) => {
   // if (isNumber === null) return console.error('Invalid userId');
   const setUserIdResult = await setValue('userId', userId);
   console.log({ setUserIdResult });
-  revalidatePath('/');
+  // revalidatePath('/');
 };
 
 export const getUserId = async () => {
