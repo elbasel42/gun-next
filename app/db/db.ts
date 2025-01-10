@@ -2,8 +2,8 @@ import GUN from 'gun';
 // import { listenerHandler } from './listener';
 
 const gunSingleton = () => {
-  return GUN();
-}
+  return GUN(['http://localhost:3001/gun']);
+};
 
 declare const globalThis: {
   gunGlobal: ReturnType<typeof gunSingleton>;
