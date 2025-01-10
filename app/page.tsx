@@ -52,8 +52,6 @@ const HomePage = () => {
       });
   }, [userId]);
 
-  if (userId === 'default-user-id') return;
-
   return (
     <main className='min-h-screen flex flex-col items-center justify-center bg-black'>
       <h1>HomePage</h1>
@@ -62,11 +60,11 @@ const HomePage = () => {
         className='border bg-white/20 rounded-3xl h-[60vh] w-[70vw] px-4 py-2 flex flex-col gap-8'
       >
         <input
-          onChange={(event) => setUserId(event.target.value)} 
+          onChange={(event) => setUserId(event.target.value)}
           required
           name='userId'
           type='text'
-          defaultValue={userId}
+          defaultValue={userId === 'default-user-id' ? '' : userId}
           className='bg-black text-white border border-white/50 text-3xl text-center py-4 rounded-md'
         />
       </form>
